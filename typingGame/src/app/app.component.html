@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="columns is-centered">
+    <div class="box column is-one-third">
+      <h1 class="title has-text-centered">Typing Challenge</h1>
+      <h2 class="has-text-centered">{{ randomText }}</h2>
+      <div class="field">
+        <input
+          (input)="handleInput($any($event.target).value)"
+          class="input"
+          type="text"
+          #userInput
+        />
+      </div>
+      <div *ngIf="userInput.value === randomText" class="box has-text-centered">
+        <h2 class="title">Success!</h2>
+      </div>
+    </div>
+  </div>
+</div>
