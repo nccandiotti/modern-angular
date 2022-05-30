@@ -1,0 +1,18 @@
+h1 {
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid lightblue;
+  border-radius: 20px;
+  margin: 40px 40px;
+  padding: 20px 20px;
+}
+button {
+  background-color: lightblue;
+}
