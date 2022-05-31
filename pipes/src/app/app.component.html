@@ -1,0 +1,87 @@
+<div class="container">
+  <h3>Payment Form</h3>
+
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Payee name</label>
+      <input
+        class="form-control"
+        type="text"
+        (input)="onNameChange($any($event.target).value)"
+      />
+    </div>
+
+    <div class="col">
+      <label for=""><b>Name</b></label>
+      <div>{{ name | titlecase }}</div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Payment Date</label>
+      <input
+        class="form-control"
+        type="date"
+        (input)="onDateChange($any($event.target).value)"
+      />
+    </div>
+
+    <div class="col">
+      <label for=""><b>Payment Date</b></label>
+      <div>{{ date | date: "MMMM d, y" }}</div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Payment Amount</label>
+      <input
+        type="number"
+        class="form-control"
+        (input)="onAmountChange($any($event.target).value)"
+      />
+    </div>
+
+    <div class="col">
+      <label for=""><b>Payment Amount</b></label>
+      <div>{{ amount | currency }}</div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Height</label>
+      <input
+        type="number"
+        class="form-control"
+        (input)="onHeightChange($any($event.target).value)"
+      />
+    </div>
+
+    <div class="col">
+      <label for=""><b>Height</b></label>
+      <div>{{ height | number }}</div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Miles</label>
+      <input
+        type="number"
+        class="form-control"
+        (input)="onMilesChange($any($event.target).value)"
+      />
+    </div>
+
+    <div class="col">
+      <label for=""><b>Kilometers</b></label>
+      <div>{{ miles | convertMilesToKilometers: "m" }}</div>
+    </div>
+  </div>
+</div>
+
+<!-- json pipe FOR DEVELOPMENT ONLY, NOT PRODUCTION. USED FOR DEBUGGING -->
+<hr />
+{{ car | json }}
