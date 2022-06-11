@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
+  // lazy load
   {
     path: 'elements',
     loadChildren: () =>
@@ -15,6 +16,11 @@ const routes: Routes = [
       import('./collections/collections.module').then(
         (m) => m.CollectionsModule
       ),
+  },
+  {
+    path: 'views',
+    loadChildren: () =>
+      import('./views/views.module').then((m) => m.ViewsModule),
   },
   { path: '', component: HomeComponent },
   { path: '**', component: NotFoundComponent },

@@ -1,3 +1,27 @@
 <app-divider>Table Component</app-divider>
 
 <app-table class="striped celled" [data]="data" [headers]="headers"></app-table>
+<br />
+<app-divider>Tab Menu</app-divider>
+<app-tabs>
+  <a
+    class="item"
+    routerLink="/collections"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Biography</a
+  >
+  <!-- Can also do this using property binding -->
+  <!-- <a
+      class="item"
+      [routerLink]="['./']"
+      routerLinkActive="active"
+      >Biography</a
+    > -->
+  <a class="item" routerLink="/collections/companies" routerLinkActive="active"
+    >Companies</a
+  >
+  <a class="item" routerLink="/collections/partners" routerLinkActive="active"
+    >Partners</a
+  >
+</app-tabs>
