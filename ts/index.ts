@@ -4,6 +4,7 @@
 // const yes: boolean = true
 // const nothingHere: null = null
 // const noDefinition: undefined = undefined
+import { NewCar } from "./Car"
 let myName = "stephen"
 
 const add = (a: number, b: number): number => {
@@ -69,3 +70,22 @@ const myCow = new Cow("moo")
 console.log(myCow)
 const myOtherCow = new Cow("Moo-Moo-Moo")
 console.log(myOtherCow)
+
+interface Driveable {
+  speed: number
+  drive(): string
+}
+
+class AnotherCar implements Driveable {
+  speed: 10
+
+  drive() {
+    return `I am driving at ${this.speed}`
+  }
+}
+
+const aNewCar = new AnotherCar()
+const startDriving = (vehicle: Driveable) => {
+  vehicle.drive()
+}
+startDriving(aNewCar)

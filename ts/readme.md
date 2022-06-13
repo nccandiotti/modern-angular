@@ -24,6 +24,7 @@
     - may appear as though constructor is taking in arguments and not doing anything with them, but it's just shorthand for assigning
 
 - Decorators
+
   - have to enable them in TS with a ts.config file
   - **npx tsc --init** creates a tsconfig.json file
   - **strict - very important whether set true VS false**
@@ -31,3 +32,17 @@
   - what's a decorator
     - a plain function that runs whenever is class is executed by TypeScript (javascript)
       <img src="../Diagrams/Picture 37 - TS Decorators Diagram.png">
+  - Decorator factory - when decorator has () after
+    - if it's a factory it **must return a function**
+
+- Module System
+  - How we share code between different files
+  - in file of class you want to export, remember to write "export" in front of class
+  - e.g., import {NewCar} from "./Car" to import one file to another
+- Strict Mode
+
+  - usually false for angular even though technically "less stable" bc strict typing is off
+
+- implements keyword - explicitely enforces that a class meets a particular contract
+
+- Generics
