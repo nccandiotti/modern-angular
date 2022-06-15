@@ -1,1 +1,19 @@
-<p>page-list works!</p>
+<p>Pages fetched :{{ pages.length }}</p>
+<table class="table is-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Count</th>
+      <th>Snippet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <div>
+      <tr *ngFor="let page of pages">
+        <td>{{ page.title }}</td>
+        <td>{{ page.wordcount }}</td>
+        <td>{{ page.snippet }}</td>
+      </tr>
+    </div>
+  </tbody>
+</table>
