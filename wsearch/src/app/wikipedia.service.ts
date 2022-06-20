@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 // http client is a class, need to create an instance of it - kind of like a dependency to WikipediaService - think Injection w /dependencies
 
@@ -7,8 +7,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class WikipediaService {
-  sendSelected = new EventEmitter<void>();
-
   // dependency injection here
   constructor(private http: HttpClient) {}
 
@@ -26,6 +24,5 @@ export class WikipediaService {
         origin: '*',
       },
     });
-    this.sendSelected.emit();
   }
 }
