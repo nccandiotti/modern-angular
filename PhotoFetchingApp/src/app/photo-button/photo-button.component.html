@@ -1,1 +1,3 @@
-<p>photo-button works!</p>
+<button (click)="handleClick()">Click here to fetch photo</button>
+<hr />
+<img *ngIf="showPhoto === true" [src]="photoUrl" alt="fetched pic" />
