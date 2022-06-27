@@ -1,6 +1,21 @@
 <!-- property binding connects this form with the cardForm FormControls -->
-<form [formGroup]="cardForm">
+<form [formGroup]="cardForm" (ngSubmit)="onSubmit($event)">
   <app-input label="Name" [control]="cardForm.get('name')"></app-input>
+  <app-input
+    label="Card Number"
+    [control]="cardForm.get('cardNumber')"
+  ></app-input>
+  <app-input
+    label="Expiration (mm/yy)"
+    [control]="cardForm.get('expiration')"
+  ></app-input>
+  <app-input
+    label="Security Code"
+    [control]="cardForm.get('securityCode')"
+  ></app-input>
+  <button [disabled]="!cardForm.valid" class="button is-primary" type="submit">
+    Submit
+  </button>
 </form>
 
 <!-- debugging -->
