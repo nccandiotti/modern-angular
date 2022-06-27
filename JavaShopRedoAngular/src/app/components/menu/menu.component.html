@@ -1,0 +1,10 @@
+<div class="container">
+  <p>Hello</p>
+  <div *ngFor="let coffee of coffeeArray">
+    <p>{{ coffee.drink }}</p>
+    <p>{{ coffee.price }}</p>
+    <p>{{ coffee.size }}</p>
+    <img src="{{ coffee.image }}" alt="{{ coffee.name }}" />
+    <!-- <img src="{{ coffee.url }}" alt="" /> -->
+  </div>
+</div>
