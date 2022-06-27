@@ -1,7 +1,11 @@
-import { FormControl } from '@angular/forms';
-export class DateFormControl extends FormControl {
-  override setValue(value: string, options: any) {
+import { UntypedFormControl } from '@angular/forms';
+export class DateFormControl extends UntypedFormControl {
+  override setValue(value: string | null, options: any) {
     console.log(value);
+    if (!value) {
+      super.setValue('', { ...options, emitModelToViewChange: true });
+      return;
+    }
     // this is what enables it to continue updating form content
 
     if (value.match(/[^0-9|\/]/gi)) {
