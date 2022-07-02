@@ -1,15 +1,14 @@
 <div class="container">
   <ng-container *ngFor="let coffee of coffeeArray">
-    <div class="columns">
-      <div class="column">
-        <p>{{ coffee.drink }}</p>
-        <p>{{ coffee.price }}</p>
-        <p>{{ coffee.size }}</p>
-      </div>
-
-      <div class="column">
-        <img src="{{ coffee.image }}" alt="{{ coffee.name }}" />
-      </div>
-    </div>
+    <p>{{ coffee.drink }}</p>
+    <img
+      (click)="handleClick()"
+      src="{{ coffee.image }}"
+      alt="{{ coffee.name }}"
+    />
   </ng-container>
+
+  <ngTemplate *ngIf="showModal">
+    <app-modal-form [showModal]="showModal"></app-modal-form>
+  </ngTemplate>
 </div>

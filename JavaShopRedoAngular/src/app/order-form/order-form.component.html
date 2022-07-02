@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="title">
+    <h3>
+      Create a Custom Drink Order
+      <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M2,21H20V19H2M20,8H18V5H20M20,3H4V13A4,4 0 0,0 8,17H14A4,4 0 0,0 18,13V10H20A2,2 0 0,0 22,8V5C22,3.89 21.1,3 20,3Z"
+        />
+      </svg>
+    </h3>
+  </div>
+  <!-- form Bulma code  -->
+  <form [formGroup]="orderForm">
+    <div class="field">
+      <div class="field">
+        <label class="label">Name your Drink</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="The most amazing drink ever..."
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Base</label>
+        <div class="control">
+          <div class="select">
+            <select required>
+              <option>Latte</option>
+              <option>Macchiatto</option>
+              <option>Black Tea</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Size</label>
+        <div class="control">
+          <div class="select">
+            <select required>
+              <option>Select a size</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="control">
+        <label class="radio">
+          <input type="radio" name="hot" />
+          Hot
+        </label>
+        <label class="radio">
+          <input type="radio" name="iced" />
+          Iced
+        </label>
+      </div>
+      <br />
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

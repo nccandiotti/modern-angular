@@ -8,6 +8,7 @@ import { CoffeeService } from '../../coffee.service';
 })
 export class MenuComponent implements OnInit {
   coffeeArray: {} = [];
+  showModal: boolean = false;
   constructor(private coffeeService: CoffeeService) {
     this.getCoffee();
   }
@@ -18,6 +19,9 @@ export class MenuComponent implements OnInit {
       this.coffeeArray = response;
     });
   }
-
+  handleClick() {
+    this.showModal = true;
+    console.log(this.showModal);
+  }
   ngOnInit(): void {}
 }
