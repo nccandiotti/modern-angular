@@ -38,4 +38,8 @@ export class TaskService {
     // sending data, need to send headers with content type
     return this.http.patch<Task>(url, task, httpOptions);
   }
+
+  addTask(task: Task): Observable<Task> {
+    return this.http.post<Task>(this.apiUrl, task, httpOptions);
+  }
 }
