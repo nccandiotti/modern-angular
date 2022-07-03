@@ -3,14 +3,17 @@
     <div class="coffee-item">
       <p>{{ coffee.drink }}</p>
       <img
-        (click)="handleClick()"
+        (click)="openModal(coffee)"
         src="{{ coffee.image }}"
         alt="{{ coffee.name }}"
       />
     </div>
   </div>
 
-  <!-- <ngTemplate > -->
-  <app-modal-form *ngIf="showModal" [showModal]="showModal"></app-modal-form>
-  <!-- </ngTemplate> -->
+  <ngTemplate *ngIf="showModal">
+    <app-modal-form
+      [selectedCoffee]="selectedCoffee"
+      [showModal]="showModal"
+    ></app-modal-form>
+  </ngTemplate>
 </div>

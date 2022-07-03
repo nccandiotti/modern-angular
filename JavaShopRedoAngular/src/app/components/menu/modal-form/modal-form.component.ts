@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Coffee } from '../../../Coffee';
 
 @Component({
   selector: 'app-modal-form',
@@ -6,14 +7,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./modal-form.component.css'],
 })
 export class ModalFormComponent implements OnInit {
+  @Input() selectedCoffee?: Coffee;
   @Input() showModal: boolean;
-  @Output() closeModal: EventEmitter<any> = new EventEmitter();
-
-  onCloseModal(event: Event) {
-    this.showModal = false;
-  }
-
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.selectedCoffee);
+  }
+
+  submitModalForm() {
+    console.log('hi');
+  }
 }

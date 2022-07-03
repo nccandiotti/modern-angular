@@ -1,11 +1,31 @@
-<div class="modalFormDiv">
-  <div class="modal is-active">
-    <div class="modal-background"></div>
-    <div class="modal-content"></div>
-    <button
-      (click)="onCloseModal($event)"
-      class="modal-close is-large"
-      aria-label="close"
-    ></button>
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <h3>{{ selectedCoffee.drink }}</h3>
+      <br />
+      <h6>{{ selectedCoffee.price | currency }}</h6>
+      <form (ngSubmit)="submitModalForm()">
+        <label for="size">Size</label>
+        <br />
+        <input class="input" type="select" />
+        <br />
+        <label for="flavor">Flavor</label>
+        <input class="input" type="select" />
+        <br />
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="hot" />
+            Hot
+          </label>
+          <label class="radio">
+            <input type="radio" name="hot" />
+            Iced
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="column">
+      <img [src]="selectedCoffee.image" alt="drink" />
+    </div>
   </div>
 </div>

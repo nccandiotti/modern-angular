@@ -1,12 +1,40 @@
-.modalFormDiv {
+.container {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; */
+
+  line-height: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  min-height: 50vh;
+  min-width: 75vh;
+
+  z-index: 10;
+  padding: 20px 20px;
+  border-radius: 20px;
+  border: solid rgba(6, 75, 59);
+  margin-bottom: 20px;
+}
+.column {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  min-height: 25vh;
-  background-color: white;
 }
 
-* {
-  color: black;
+img {
+  display: flex;
+  align-items: center;
+  height: 400px;
+  width: 400px;
+  border-radius: 30px;
+}
+
+h3 {
+  font-size: 40px;
 }

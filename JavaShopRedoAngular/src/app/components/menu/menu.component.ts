@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoffeeService } from '../../coffee.service';
+import { Coffee } from '../../Coffee';
 
 @Component({
   selector: 'app-menu',
@@ -9,6 +10,7 @@ import { CoffeeService } from '../../coffee.service';
 export class MenuComponent implements OnInit {
   coffeeArray: {} = [];
   showModal: boolean = false;
+  selectedCoffee: Coffee;
   constructor(private coffeeService: CoffeeService) {
     this.getCoffee();
   }
@@ -19,9 +21,10 @@ export class MenuComponent implements OnInit {
       this.coffeeArray = response;
     });
   }
-  handleClick() {
+  openModal(coffee: Coffee) {
     this.showModal = true;
-    console.log(this.showModal);
+    console.log('showModal', this.showModal);
+    this.selectedCoffee = coffee;
   }
   ngOnInit(): void {}
 }
