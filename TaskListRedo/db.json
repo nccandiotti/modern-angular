@@ -10,7 +10,7 @@
       "id": "2",
       "text": "Hair Appointment",
       "day": "May 6th at 4:30pm",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": "3",
@@ -19,10 +19,10 @@
       "reminder": false
     },
     {
-      "text": "test",
-      "day": "07/03/2022 at 5:30pm",
+      "text": "test2",
+      "day": "test2",
       "reminder": true,
-      "id": "xTNbih4"
+      "id": "_-A7Jdp"
     }
   ]
 }

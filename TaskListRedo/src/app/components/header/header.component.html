@@ -1,8 +1,10 @@
 <header>
   <h1>{{ title }}</h1>
+  <!-- ngIf hasRoute makes it so button only shows on the home page -->
   <app-button
-    color="green"
-    text="Add"
+    *ngIf="hasRoute('/')"
+    color="{{ showAddTask ? 'red' : 'green' }}"
+    text="{{ showAddTask ? 'Close' : 'Add' }}"
     (btnClick)="toggleAddTask()"
   ></app-button>
 </header>
