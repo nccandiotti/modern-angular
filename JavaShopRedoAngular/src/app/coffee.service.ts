@@ -1,18 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-// interface CoffeeResponse {
-//   [
-//     coffee: {
-//       id: number;
-//       drink: string;
-//       price: string;
-//       size: string;
-//       flavor: string;
-//       image: string;
-//     }
-//   ];
-// }
+import { Coffee } from './Coffee';
 
 @Injectable({
   providedIn: 'root',
@@ -20,6 +8,6 @@ import { HttpClient } from '@angular/common/http';
 export class CoffeeService {
   constructor(private http: HttpClient) {}
   fetchCoffee() {
-    return this.http.get('http://localhost:3000/coffee');
+    return this.http.get<Coffee>('http://localhost:3000/coffee');
   }
 }

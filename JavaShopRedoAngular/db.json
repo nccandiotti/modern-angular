@@ -3,82 +3,92 @@
     {
       "id": 1,
       "drink": "Latte",
-      "price": "4.50",
+      "price": 4.5,
       "size": "medium",
       "flavor": "none",
-      "image": "https://images.unsplash.com/photo-1559001724-fbad036dbc9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+      "image": "https://images.unsplash.com/photo-1559001724-fbad036dbc9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "hot": "false"
     },
     {
       "id": 2,
       "drink": "Macchiato",
-      "price": "3.50",
+      "price": 3.5,
       "size": "medium",
       "flavor": "none",
-      "image": "https://i2.wp.com/www.teacoffeecup.com/wp-content/uploads/2020/08/classic-macchiato-espresso.jpg?fit=550%2C367&ssl=1"
+      "image": "https://i2.wp.com/www.teacoffeecup.com/wp-content/uploads/2020/08/classic-macchiato-espresso.jpg?fit=550%2C367&ssl=1",
+      "hot": "false"
     },
     {
       "id": 3,
       "drink": "Cappuccino",
-      "price": "3.00",
+      "price": 3.0,
       "size": "medium",
       "flavor": "none",
-      "image": "https://merriam-webster.com/assets/mw/images/article/art-wap-landing-mp-lg/cappuccino-2029-e80b7c6d318c7862df2c4c8623a11f99@1x.jpg"
+      "image": "https://merriam-webster.com/assets/mw/images/article/art-wap-landing-mp-lg/cappuccino-2029-e80b7c6d318c7862df2c4c8623a11f99@1x.jpg",
+      "hot": false
     },
     {
       "id": 4,
       "drink": "Chamomile Tea",
-      "price": "2.75",
+      "price": 2.75,
       "size": "medium",
       "flavor": "none",
-      "image": "https://post.healthline.com/wp-content/uploads/2020/09/chamomile-tea-thumb-1-732x549.jpg"
+      "image": "https://post.healthline.com/wp-content/uploads/2020/09/chamomile-tea-thumb-1-732x549.jpg",
+      "hot": false
     },
     {
       "id": 5,
       "drink": "Chai Latte",
-      "price": "3.50",
+      "price": 3.5,
       "size": "medium",
       "flavor": "none",
-      "image": "https://wholefully.com/wp-content/uploads/2019/11/homemade-chai-tea-gift-set-mug-735x1103.jpg"
+      "image": "https://wholefully.com/wp-content/uploads/2019/11/homemade-chai-tea-gift-set-mug-735x1103.jpg",
+      "hot": false
     },
     {
       "id": 6,
       "drink": "Espresso",
-      "price": "2.50",
+      "price": 2.5,
       "size": "medium",
       "flavor": "none",
-      "image": "https://images.unsplash.com/photo-1615326962740-77492d3d7f19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZXNwcmVzc298ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+      "image": "https://images.unsplash.com/photo-1615326962740-77492d3d7f19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZXNwcmVzc298ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "hot": false
     },
     {
       "id": 7,
       "drink": "Hot Chocolate",
-      "price": "4.00",
+      "price": 4.0,
       "size": "medium",
       "flavor": "none",
-      "image": "https://images.unsplash.com/photo-1590080876209-c70d0f0bf6a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90JTIwY2hvY29sYXRlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      "image": "https://images.unsplash.com/photo-1590080876209-c70d0f0bf6a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG90JTIwY2hvY29sYXRlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "hot": false
     },
     {
       "id": 8,
       "drink": "Iced Coffee",
-      "price": "5.00",
+      "price": 5.0,
       "size": "medium",
       "flavor": "none",
-      "image": "https://cdn.pixabay.com/photo/2020/03/31/17/42/ice-coffee-4988704_960_720.jpg"
+      "image": "https://cdn.pixabay.com/photo/2020/03/31/17/42/ice-coffee-4988704_960_720.jpg",
+      "hot": false
     },
     {
       "id": 9,
       "drink": "Iced Matcha",
-      "price": "5.50",
+      "price": 5.5,
       "size": "medium",
       "flavor": "none",
-      "image": "images/pexels-photo-5946972.jpg"
+      "image": "https://www.eatingbirdfood.com/wp-content/uploads/2021/04/iced-matcha-latte-hero.jpg",
+      "hot": false
     },
     {
+      "id": 10,
       "drink": "SprinkleDrink",
-      "price": "6.00",
+      "price": 6.0,
       "size": "Small",
       "flavor": "Sugar",
       "image": "https://i.insider.com/5bb3d1c701145545560b0e12?width=751&format=jpeg",
-      "id": 10
+      "hot": false
     }
   ]
 }
