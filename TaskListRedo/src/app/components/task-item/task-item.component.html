@@ -1,4 +1,9 @@
-<div class="task">
+<!-- ngClass shows reminder if task.reminder is true - styling directive -->
+<div
+  [ngClass]="{ reminder: task.reminder }"
+  class="task"
+  (dblclick)="onToggle(task)"
+>
   <h3>
     {{ task.text }}
     <fa-icon

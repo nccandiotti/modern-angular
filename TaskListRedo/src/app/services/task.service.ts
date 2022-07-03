@@ -9,6 +9,11 @@ import { Observable } from 'rxjs';
 
 // http
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+//set headers for patch and post
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+};
 @Injectable({
   providedIn: 'root',
 })
@@ -26,5 +31,11 @@ export class TaskService {
     const url = `${this.apiUrl}/${task.id}`;
     // delete type task, pass in url which includes id (defined line above)
     return this.http.delete<Task>(url);
+  }
+
+  updateTaskReminder(task: Task): Observable<Task> {
+    const url = `${this.apiUrl}/${task.id}`;
+    // sending data, need to send headers with content type
+    return this.http.patch<Task>(url, task, httpOptions);
   }
 }
