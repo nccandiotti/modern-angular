@@ -33,9 +33,9 @@ img {
   height: 400px;
   width: 400px;
   border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.623);
 }
-
-h3 {
+\ h3 {
   font-size: 40px;
 }
 .header {

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Meddon&family=Montserrat:wght@300&family=Raleway:wght@300;400;600&family=Sacramento&family=Tangerine&family=Train+One&display=swap");
+
 .main-container {
   margin-top: 40px;
   display: flex;
@@ -7,6 +9,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Sacramento;
+}
+h1 {
+  font-family: Sacramento;
+  /* font-size: 20px; */
 }
 .title {
   font-size: 80px;

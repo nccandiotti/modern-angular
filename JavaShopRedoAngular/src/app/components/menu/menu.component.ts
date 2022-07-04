@@ -23,8 +23,13 @@ export class MenuComponent implements OnInit {
   }
   openModal(coffee: Coffee) {
     this.showModal = true;
-    console.log('showModal', this.showModal);
     this.selectedCoffee = coffee;
+    console.log(
+      'showModal',
+      this.showModal,
+      'selectedCoffee',
+      this.selectedCoffee
+    );
   }
   closeModal() {
     this.showModal = false;
