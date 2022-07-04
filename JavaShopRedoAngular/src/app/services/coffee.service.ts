@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Coffee } from './Coffee';
+import { Coffee } from '../Coffee';
 import { Observable, Subject } from 'rxjs';
 
 //set headers for patch and post

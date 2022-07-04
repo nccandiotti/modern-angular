@@ -22,9 +22,9 @@ const routes: Routes = [
     CartComponent,
     MenuComponent,
     OrderFormComponent,
-    ModalFormComponent,
     AboutComponent,
     FooterComponent,
+    ModalFormComponent,
   ],
   imports: [
     BrowserModule,

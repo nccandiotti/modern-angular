@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Coffee } from '../../../Coffee'; // interface
 import { Subscription } from 'rxjs'; // subscription
-import { CoffeeService } from '../../../coffee.service'; // service
+import { CoffeeService } from '../../../services/coffee.service'; // service
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
