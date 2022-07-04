@@ -15,7 +15,8 @@ export class ModalFormComponent implements OnInit {
     console.log(this.selectedCoffee);
   }
 
-  submitModalForm() {
+  submitModalForm(e: Event) {
+    e.preventDefault();
     console.log('hi');
   }
 }

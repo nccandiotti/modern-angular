@@ -1,10 +1,13 @@
 <div class="container">
+  <div class="header">
+    <button></button>
+  </div>
   <div class="columns">
     <div class="column">
       <h3>{{ selectedCoffee.drink }}</h3>
       <br />
       <h6>{{ selectedCoffee.price | currency }}</h6>
-      <form (ngSubmit)="submitModalForm()">
+      <form (ngSubmit)="submitModalForm($event)">
         <label for="size">Size</label>
         <br />
         <input class="input" type="select" />
@@ -22,6 +25,14 @@
             Iced
           </label>
         </div>
+        <br />
+        <button
+          (ngSubmit)="submitModalForm($event)"
+          class="button"
+          type="submit"
+        >
+          Add to Cart
+        </button>
       </form>
     </div>
     <div class="column">
