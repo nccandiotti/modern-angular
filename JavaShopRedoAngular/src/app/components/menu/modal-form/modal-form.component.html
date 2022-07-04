@@ -1,6 +1,8 @@
-<div class="container">
+<div *ngIf="showModal" class="container">
   <div class="header">
-    <button></button>
+    <button class="button" (click)="onClick()">
+      <fa-icon [icon]="faXmark"></fa-icon>
+    </button>
   </div>
   <div class="columns">
     <div class="column">

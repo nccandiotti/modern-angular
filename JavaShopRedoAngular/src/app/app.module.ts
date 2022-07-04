@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ModalFormComponent } from './components/menu/modal-form/modal-form.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

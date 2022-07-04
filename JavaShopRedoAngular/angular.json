@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "JavaShopRedoAngular"
+  "cli": {
+    "analytics": false
+  }
 }

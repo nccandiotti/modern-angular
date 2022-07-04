@@ -38,3 +38,8 @@ img {
 h3 {
   font-size: 40px;
 }
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}

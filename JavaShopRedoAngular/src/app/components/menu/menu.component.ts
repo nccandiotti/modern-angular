@@ -26,5 +26,8 @@ export class MenuComponent implements OnInit {
     console.log('showModal', this.showModal);
     this.selectedCoffee = coffee;
   }
+  closeModal() {
+    this.showModal = false;
+  }
   ngOnInit(): void {}
 }
