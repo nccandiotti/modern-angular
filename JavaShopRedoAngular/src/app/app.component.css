@@ -13,11 +13,13 @@ header {
 }
 h1 {
   font-family: Sacramento;
+  display: flex;
+  justify-content: flex-end;
   /* font-size: 20px; */
 }
 .title {
   font-size: 80px;
-  width: 100%;
+  width: 100vw;
   height: 200px;
   align-items: right;
   background: linear-gradient(110deg, #bff2e7 60%, #1a5447 60%);
