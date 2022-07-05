@@ -8,5 +8,9 @@
       />
     </svg>
   </div>
+  <div *ngFor="let item of cartItems">
+    <span> {{ item.drink }}</span
+    ><span>{{ item.price }}</span>
+  </div>
   <p class="cartTotal">Current Total : {{ cartTotal | currency }}</p>
 </div>

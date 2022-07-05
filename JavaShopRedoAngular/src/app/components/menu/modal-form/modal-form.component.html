@@ -1,6 +1,6 @@
 <div *ngIf="showModal" class="container">
   <div class="header">
-    <button class="button" (click)="onClick()">
+    <button class="button" (click)="onClick(selectedCoffee)">
       <fa-icon [icon]="faXmark"></fa-icon>
     </button>
   </div>
@@ -9,26 +9,39 @@
       <h3>{{ selectedCoffee.drink }}</h3>
       <br />
       <h6>{{ selectedCoffee.price | currency }}</h6>
-      <form (ngSubmit)="submitModalForm($event)">
+      <!-- form ---------------------------------------->
+      <form
+        [formGroup]="modalForm"
+        (ngSubmit)="submitModalForm($event, selectedCoffee)"
+      >
         <label for="size">Size</label>
         <br />
-        <input class="input" type="select" />
+        <select class="select" type="select" formControlName="size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+
+        <br />
         <br />
         <label for="flavor">Flavor</label>
-        <input class="input" type="select" />
+        <input class="input" type="text" formControlName="flavor" />
+        <br />
         <br />
         <div class="control">
           <label class="radio">
-            <input type="radio" name="hot" />
+            <input value="hot" type="radio" formControlName="hot" />
             Hot
           </label>
           <label class="radio">
-            <input type="radio" name="hot" />
+            <input value="iced" type="radio" formControlName="hot" />
             Iced
           </label>
         </div>
         <br />
+        <br />
         <button
+          [disabled]="!modalForm.valid"
           (ngSubmit)="submitModalForm($event)"
           class="button"
           type="submit"
@@ -36,6 +49,7 @@
           Add to Cart
         </button>
       </form>
+      <!-- end form -------------------------------------->
     </div>
     <div class="column">
       <img [src]="selectedCoffee.image" alt="drink" />
